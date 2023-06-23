@@ -6,11 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start:supabase": "supabase start",
     "lint": "next lint",
-    "migrate": "sh -c 'prisma migrate dev --name ${0}'"
+    "migrate:create": "sh -c 'prisma migrate dev --name ${0} --create-only'",
+    "migrate:dev": "sh -c 'prisma migrate dev --name ${0}'",
+    "migrate:reset": "sh -c 'prisma migrate reset",
+    "migrate:deploy": "prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "4.16.1",
+    "@supabase/auth-helpers-nextjs": "^0.7.2",
+    "@supabase/auth-helpers-react": "^0.4.0",
+    "@supabase/supabase-js": "^2.26.0",
     "@types/node": "20.3.1",
     "@types/react": "18.2.13",
     "@types/react-dom": "18.2.6",
